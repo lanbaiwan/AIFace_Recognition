@@ -1,0 +1,10 @@
+Model loaded..
+Choose layer: 23 for cls embedding
+Not add Gaussian noise to the feature embedding.
+Not use random erasing.
+data mode: ours
+[{'data_path': '/home/data/szk/face/face', 'data_mode': 'ours'}]
+total_list_len: 6000
+Fix the backbone.
+Length of dataset: 375
+Directory ./TTO_checkpoints/2024-10-01-21-34-56 is created.

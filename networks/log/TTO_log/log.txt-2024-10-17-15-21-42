@@ -1,0 +1,5 @@
+Model loaded..
+Use LinearProbe head: pretrained_weights/10_16_final_TTO_4.pth
+Choose layer: 23 for cls embedding
+Not add Gaussian noise to the feature embedding.
+Not use random erasing.

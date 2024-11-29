@@ -1,0 +1,297 @@
+Set Seed: 0
+Training options:
+----------------- Options ---------------
+            GaussianNoise: False                         
+            RandomErasing: False                         
+                     arch: CLIP:ViT-L/14                 	[default: res50]
+               batch_size: 16                            	[default: 256]
+                    beta1: 0.9                           
+                blur_prob: 0.5                           
+                 blur_sig: 0.0, 2.0                      
+          checkpoints_dir: ./checkpoints                 
+                class_bal: None                          
+                 cropSize: 224                           
+                 data_aug: True                          
+               data_label: train                         
+                data_mode: ours                          
+          earlystop_epoch: 3                             
+              epoch_count: 1                             
+           fake_list_path: /home/data/szk/our_dataset_10_22/1_fake	[default: None]
+             fix_backbone: True                          	[default: False]
+                focalloss: False                         
+                  gpu_ids: 0                             
+                init_gain: 0.02                          
+                init_type: normal                        
+                  isTrain: True                          
+               jpg_method: cv2,pil                       
+                 jpg_prob: 0.5                           
+                 jpg_qual: 30, 100                       
+               last_epoch: -1                            
+                 loadSize: 224                           
+                loss_freq: 400                           
+                       lr: 0.0001                        
+                     mode: binary                        
+                     name: clip_vitl14-2024-10-22-15-08-06	[default: experiment_name]
+                    niter: 100                           
+                  no_crop: True                          
+                  no_flip: False                         
+              num_threads: 4                             
+                    optim: adam                          
+           real_list_path: /home/data/szk/our_dataset_10_22/0_real	[default: None]
+                rz_interp: bilinear                      
+          save_epoch_freq: 1                             
+           serial_batches: False                         
+                   suffix: time                          	[default: ]
+              train_split: train                         
+                val_split: val                           
+       wang2020_data_path: None                          
+             weight_decay: 0.0                           
+----------------- End -------------------
+Directory ./checkpoints/clip_vitl14-2024-10-22-15-08-06 is created.
+-----------------------------------------
+Validation options:
+GaussianNoise: False
+RandomErasing: False
+arch: CLIP:ViT-L/14
+batch_size: 16
+beta1: 0.9
+blur_prob: 0.5
+blur_sig: [0.0, 2.0]
+checkpoints_dir: ./checkpoints
+class_bal: None
+cropSize: 224
+data_aug: False
+data_label: val
+data_mode: ours
+earlystop_epoch: 3
+epoch_count: 1
+fake_list_path: /home/data/szk/our_dataset_10_22/1_fake
+fix_backbone: True
+focalloss: False
+gpu_ids: [0]
+init_gain: 0.02
+init_type: normal
+isTrain: False
+jpg_method: ['cv2', 'pil']
+jpg_prob: 0.5
+jpg_qual: [30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+last_epoch: -1
+loadSize: 224
+loss_freq: 400
+lr: 0.0001
+mode: binary
+name: clip_vitl14-2024-10-22-15-08-06
+niter: 100
+no_crop: True
+no_flip: True
+no_resize: False
+num_threads: 4
+optim: adam
+randomErasing: False
+real_list_path: /home/data/szk/our_dataset_10_22/0_real
+rz_interp: ['bilinear']
+save_epoch_freq: 1
+serial_batches: True
+suffix: time
+train_split: train
+val_split: val
+wang2020_data_path: None
+weight_decay: 0.0
+----------------- End -------------------
+Choose layer: 23 for cls embedding
+Not add Gaussian noise to the feature embedding.
+Not use random erasing.
+Use BCELoss!
+-----------------------------------------
+Train Dataset:
+Shuffle the dataset.
+Not use crop.
+Use RandomHorizontalFlip.
+Resize image to (224,224)  using  ['bilinear']  method.
+Use cut func
+Using blur and jpeg augment.
+mean and std stats are from:  clip
+using Official CLIP's normalization
+-----------------------------------------
+Valid Dataset:
+Not shuffle the dataset.
+Not use crop.
+Not use RandomHorizontalFlip.
+Resize image to (224,224)  using  ['bilinear']  method.
+Use cut func
+Do not use blur and jpeg augment.
+mean and std stats are from:  clip
+using Official CLIP's normalization
+----------------- End -------------------
+Length of data loader: 599
+Train loss: 0.346410870552063 at step: 400
+Iter time:  0.13695518910884857
+saving the model at the end of epoch 0
+Length of dataset: 64
+
+(Val @ epoch 0) acc: 0.8943731490621916; ap: 0.9380315531510421
+Validation accuracy increased (-inf --> 0.894373).  Saving model ...
+Train loss: 0.2368413507938385 at step: 800
+Iter time:  0.14917267680168153
+saving the model at the end of epoch 1
+Length of dataset: 64
+
+(Val @ epoch 1) acc: 0.9239881539980257; ap: 0.9591377376633331
+Validation accuracy increased (0.894373 --> 0.923988).  Saving model ...
+Train loss: 0.3813828229904175 at step: 1200
+Iter time:  0.1534007982412974
+Train loss: 0.2482108473777771 at step: 1600
+Iter time:  0.14913369864225387
+saving the model at the end of epoch 2
+Length of dataset: 64
+
+(Val @ epoch 2) acc: 0.932872655478776; ap: 0.9679338505519829
+Validation accuracy increased (0.923988 --> 0.932873).  Saving model ...
+Train loss: 0.4570285677909851 at step: 2000
+Iter time:  0.15172418320178985
+saving the model at the end of epoch 3
+Length of dataset: 64
+
+(Val @ epoch 3) acc: 0.9358341559723593; ap: 0.971897939303745
+Validation accuracy increased (0.932873 --> 0.935834).  Saving model ...
+Train loss: 0.25843310356140137 at step: 2400
+Iter time:  0.15352097551027935
+Train loss: 0.06905195116996765 at step: 2800
+Iter time:  0.1510694306237357
+saving the model at the end of epoch 4
+Length of dataset: 64
+
+(Val @ epoch 4) acc: 0.9387956564659428; ap: 0.975381666110845
+Validation accuracy increased (0.935834 --> 0.938796).  Saving model ...
+Train loss: 0.21907269954681396 at step: 3200
+Iter time:  0.15243925996124744
+saving the model at the end of epoch 5
+Length of dataset: 64
+
+(Val @ epoch 5) acc: 0.9437314906219151; ap: 0.9772121629728756
+Validation accuracy increased (0.938796 --> 0.943731).  Saving model ...
+Train loss: 0.19774028658866882 at step: 3600
+Iter time:  0.15354017284181382
+Train loss: 0.08572883903980255 at step: 4000
+Iter time:  0.15182313174009324
+saving the model at the end of epoch 6
+Length of dataset: 64
+
+(Val @ epoch 6) acc: 0.9437314906219151; ap: 0.9782596410090068
+EarlyStopping counter: 1 out of 3
+Train loss: 0.3552563488483429 at step: 4400
+Iter time:  0.15280225905505093
+saving the model at the end of epoch 7
+Length of dataset: 64
+
+(Val @ epoch 7) acc: 0.9466929911154985; ap: 0.9796472948165372
+Validation accuracy increased (0.943731 --> 0.946693).  Saving model ...
+Train loss: 0.08781550824642181 at step: 4800
+Iter time:  0.15360617871085802
+Train loss: 0.07172615081071854 at step: 5200
+Iter time:  0.15227924447793226
+saving the model at the end of epoch 8
+Length of dataset: 64
+
+(Val @ epoch 8) acc: 0.945705824284304; ap: 0.9804226595541334
+EarlyStopping counter: 1 out of 3
+Train loss: 0.09254848957061768 at step: 5600
+Iter time:  0.1529971398626055
+saving the model at the end of epoch 9
+Length of dataset: 64
+
+(Val @ epoch 9) acc: 0.9516288252714709; ap: 0.9832882892826653
+Validation accuracy increased (0.946693 --> 0.951629).  Saving model ...
+Train loss: 0.043530531227588654 at step: 6000
+Iter time:  0.153588343222936
+Train loss: 0.07865314930677414 at step: 6400
+Iter time:  0.15250386971980334
+saving the model at the end of epoch 10
+Length of dataset: 64
+
+(Val @ epoch 10) acc: 0.9506416584402764; ap: 0.9832604196282384
+EarlyStopping counter: 1 out of 3
+Train loss: 0.037260282784700394 at step: 6800
+Iter time:  0.1530315998021294
+saving the model at the end of epoch 11
+Length of dataset: 64
+
+(Val @ epoch 11) acc: 0.9506416584402764; ap: 0.9843553239862607
+EarlyStopping counter: 2 out of 3
+Train loss: 0.21067140996456146 at step: 7200
+Iter time:  0.15350396076838174
+Train loss: 0.28015756607055664 at step: 7600
+Iter time:  0.15258530632445685
+saving the model at the end of epoch 12
+Length of dataset: 64
+
+(Val @ epoch 12) acc: 0.9526159921026653; ap: 0.9836620141161859
+EarlyStopping counter: 3 out of 3
+Learning rate dropped by 10, continue training...
+Train loss: 0.06418365240097046 at step: 8000
+Iter time:  0.15304916563630105
+saving the model at the end of epoch 13
+Length of dataset: 64
+
+(Val @ epoch 13) acc: 0.9506416584402764; ap: 0.9833396533333685
+Validation accuracy increased (-inf --> 0.950642).  Saving model ...
+Train loss: 0.34165051579475403 at step: 8400
+Iter time:  0.15347448709465208
+Train loss: 0.6244468092918396 at step: 8800
+Iter time:  0.15268183277411895
+saving the model at the end of epoch 14
+Length of dataset: 64
+
+(Val @ epoch 14) acc: 0.9516288252714709; ap: 0.9835747864369954
+EarlyStopping counter: 1 out of 3
+Train loss: 0.13385051488876343 at step: 9200
+Iter time:  0.15308258385761925
+saving the model at the end of epoch 15
+Length of dataset: 64
+
+(Val @ epoch 15) acc: 0.9516288252714709; ap: 0.9834110979908401
+EarlyStopping counter: 2 out of 3
+Train loss: 0.053289033472537994 at step: 9600
+Iter time:  0.15344122529029847
+Train loss: 0.15953508019447327 at step: 10000
+Iter time:  0.152743665599823
+saving the model at the end of epoch 16
+Length of dataset: 64
+
+(Val @ epoch 16) acc: 0.9516288252714709; ap: 0.983773661166955
+EarlyStopping counter: 3 out of 3
+Learning rate dropped by 10, continue training...
+Train loss: 0.08318912237882614 at step: 10400
+Iter time:  0.15308570075493594
+saving the model at the end of epoch 17
+Length of dataset: 64
+
+(Val @ epoch 17) acc: 0.9526159921026653; ap: 0.9837843728970384
+Validation accuracy increased (-inf --> 0.952616).  Saving model ...
+Train loss: 0.10869933664798737 at step: 10800
+Iter time:  0.15340221605919024
+Train loss: 0.08342601358890533 at step: 11200
+Iter time:  0.1527739756022181
+saving the model at the end of epoch 18
+Length of dataset: 64
+
+(Val @ epoch 18) acc: 0.9526159921026653; ap: 0.9837778327127936
+EarlyStopping counter: 1 out of 3
+Train loss: 0.08524851500988007 at step: 11600
+Iter time:  0.15308167490465888
+saving the model at the end of epoch 19
+Length of dataset: 64
+
+(Val @ epoch 19) acc: 0.9526159921026653; ap: 0.9837596139908309
+EarlyStopping counter: 2 out of 3
+Train loss: 0.20563986897468567 at step: 12000
+Iter time:  0.15338243065277735
+Train loss: 0.08555439114570618 at step: 12400
+Iter time:  0.15281514088953696
+saving the model at the end of epoch 20
+Length of dataset: 64
+
+(Val @ epoch 20) acc: 0.9526159921026653; ap: 0.9837594888820383
+EarlyStopping counter: 3 out of 3
+Early stopping.
+Training completed in 32 minutes and 8 seconds.

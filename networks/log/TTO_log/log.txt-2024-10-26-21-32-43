@@ -1,0 +1,13 @@
+Model loaded..
+Use LinearProbe head: pretrained_weights/10_26_17_53.pth
+Choose layer: 23 for cls embedding
+Not add Gaussian noise to the feature embedding.
+Not use random erasing.
+data mode: ours
+[{'data_path': '/home/data/szk/face_B', 'data_mode': 'ours'}]
+total_list_len: 6000
+Fix the backbone.
+Length of dataset: 6000
+Directory ./TTO_checkpoints/2024-10-26-21-33-00 is created.
+Finish!
+Found 5541 trainable_data in total.

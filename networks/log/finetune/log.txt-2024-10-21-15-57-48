@@ -1,0 +1,297 @@
+Set Seed: 0
+Training options:
+----------------- Options ---------------
+            GaussianNoise: False                         
+            RandomErasing: False                         
+                     arch: CLIP:ViT-L/14                 	[default: res50]
+               batch_size: 16                            	[default: 256]
+                    beta1: 0.9                           
+                blur_prob: 0.5                           
+                 blur_sig: 0.0, 2.0                      
+          checkpoints_dir: ./checkpoints                 
+                class_bal: None                          
+                 cropSize: 224                           
+                 data_aug: True                          
+               data_label: train                         
+                data_mode: ours                          
+          earlystop_epoch: 3                             
+              epoch_count: 1                             
+           fake_list_path: /home/data/szk/dark_power/fake	[default: None]
+             fix_backbone: True                          	[default: False]
+                focalloss: False                         
+                  gpu_ids: 0                             
+                init_gain: 0.02                          
+                init_type: normal                        
+                  isTrain: True                          
+               jpg_method: cv2,pil                       
+                 jpg_prob: 0.5                           
+                 jpg_qual: 30, 100                       
+               last_epoch: -1                            
+                 loadSize: 224                           
+                loss_freq: 400                           
+                       lr: 0.0001                        
+                     mode: binary                        
+                     name: clip_vitl14-2024-10-21-15-57-48	[default: experiment_name]
+                    niter: 100                           
+                  no_crop: True                          
+                  no_flip: False                         
+              num_threads: 4                             
+                    optim: adam                          
+           real_list_path: /home/data/szk/dark_power/real	[default: None]
+                rz_interp: bilinear                      
+          save_epoch_freq: 1                             
+           serial_batches: False                         
+                   suffix: time                          	[default: ]
+              train_split: train                         
+                val_split: val                           
+       wang2020_data_path: None                          
+             weight_decay: 0.0                           
+----------------- End -------------------
+Directory ./checkpoints/clip_vitl14-2024-10-21-15-57-48 is created.
+-----------------------------------------
+Validation options:
+GaussianNoise: False
+RandomErasing: False
+arch: CLIP:ViT-L/14
+batch_size: 16
+beta1: 0.9
+blur_prob: 0.5
+blur_sig: [0.0, 2.0]
+checkpoints_dir: ./checkpoints
+class_bal: None
+cropSize: 224
+data_aug: False
+data_label: val
+data_mode: ours
+earlystop_epoch: 3
+epoch_count: 1
+fake_list_path: /home/data/szk/dark_power/fake
+fix_backbone: True
+focalloss: False
+gpu_ids: [0]
+init_gain: 0.02
+init_type: normal
+isTrain: False
+jpg_method: ['cv2', 'pil']
+jpg_prob: 0.5
+jpg_qual: [30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+last_epoch: -1
+loadSize: 224
+loss_freq: 400
+lr: 0.0001
+mode: binary
+name: clip_vitl14-2024-10-21-15-57-48
+niter: 100
+no_crop: True
+no_flip: True
+no_resize: False
+num_threads: 4
+optim: adam
+randomErasing: False
+real_list_path: /home/data/szk/dark_power/real
+rz_interp: ['bilinear']
+save_epoch_freq: 1
+serial_batches: True
+suffix: time
+train_split: train
+val_split: val
+wang2020_data_path: None
+weight_decay: 0.0
+----------------- End -------------------
+Choose layer: 23 for cls embedding
+Not add Gaussian noise to the feature embedding.
+Not use random erasing.
+Use BCELoss!
+Load ckpt from: ./pretrained_weights/10_16_final.pth
+-----------------------------------------
+Train Dataset:
+Shuffle the dataset.
+Not use crop.
+Use RandomHorizontalFlip.
+Resize image to (224,224)  using  ['bilinear']  method.
+Use cut func
+Using blur and jpeg augment.
+mean and std stats are from:  clip
+using Official CLIP's normalization
+-----------------------------------------
+Valid Dataset:
+Not shuffle the dataset.
+Not use crop.
+Not use RandomHorizontalFlip.
+Resize image to (224,224)  using  ['bilinear']  method.
+Use cut func
+Do not use blur and jpeg augment.
+mean and std stats are from:  clip
+using Official CLIP's normalization
+----------------- End -------------------
+Length of data loader: 15
+saving the model at the end of epoch 0
+Length of dataset: 15
+
+(Val @ epoch 0) acc: 0.7035398230088495; ap: 0.5734224285413274
+saving the model at the end of epoch 1
+Length of dataset: 15
+
+(Val @ epoch 1) acc: 0.7035398230088495; ap: 0.5825087895527259
+saving the model at the end of epoch 2
+Length of dataset: 15
+
+(Val @ epoch 2) acc: 0.6991150442477876; ap: 0.5926258121291488
+saving the model at the end of epoch 3
+Length of dataset: 15
+
+(Val @ epoch 3) acc: 0.7079646017699115; ap: 0.6034526799334055
+saving the model at the end of epoch 4
+Length of dataset: 15
+
+(Val @ epoch 4) acc: 0.7079646017699115; ap: 0.6138451132423435
+saving the model at the end of epoch 5
+Length of dataset: 15
+
+(Val @ epoch 5) acc: 0.7123893805309734; ap: 0.624362303896506
+saving the model at the end of epoch 6
+Length of dataset: 15
+
+(Val @ epoch 6) acc: 0.7256637168141593; ap: 0.6334161896610152
+saving the model at the end of epoch 7
+Length of dataset: 15
+
+(Val @ epoch 7) acc: 0.7256637168141593; ap: 0.6486587548403506
+saving the model at the end of epoch 8
+Length of dataset: 15
+
+(Val @ epoch 8) acc: 0.7256637168141593; ap: 0.6564683865992641
+saving the model at the end of epoch 9
+Length of dataset: 15
+
+(Val @ epoch 9) acc: 0.7300884955752213; ap: 0.6633041277293636
+saving the model at the end of epoch 10
+Length of dataset: 15
+
+(Val @ epoch 10) acc: 0.7345132743362832; ap: 0.6743197662068747
+saving the model at the end of epoch 11
+Length of dataset: 15
+
+(Val @ epoch 11) acc: 0.7300884955752213; ap: 0.6798693867396953
+saving the model at the end of epoch 12
+Length of dataset: 15
+
+(Val @ epoch 12) acc: 0.7433628318584071; ap: 0.6878578651727661
+saving the model at the end of epoch 13
+Length of dataset: 15
+
+(Val @ epoch 13) acc: 0.7522123893805309; ap: 0.7002025130431423
+saving the model at the end of epoch 14
+Length of dataset: 15
+
+(Val @ epoch 14) acc: 0.7566371681415929; ap: 0.7104877847553983
+saving the model at the end of epoch 15
+Length of dataset: 15
+
+(Val @ epoch 15) acc: 0.7610619469026548; ap: 0.7151381015498609
+saving the model at the end of epoch 16
+Length of dataset: 15
+
+(Val @ epoch 16) acc: 0.7654867256637168; ap: 0.7277482957146784
+saving the model at the end of epoch 17
+Length of dataset: 15
+
+(Val @ epoch 17) acc: 0.7654867256637168; ap: 0.7374663626005696
+saving the model at the end of epoch 18
+Length of dataset: 15
+
+(Val @ epoch 18) acc: 0.7699115044247787; ap: 0.7428171913794585
+saving the model at the end of epoch 19
+Length of dataset: 15
+
+(Val @ epoch 19) acc: 0.7743362831858407; ap: 0.7507099129477459
+saving the model at the end of epoch 20
+Length of dataset: 15
+
+(Val @ epoch 20) acc: 0.7787610619469026; ap: 0.756906757040764
+saving the model at the end of epoch 21
+Length of dataset: 15
+
+(Val @ epoch 21) acc: 0.7787610619469026; ap: 0.7645322220601427
+saving the model at the end of epoch 22
+Length of dataset: 15
+
+(Val @ epoch 22) acc: 0.7787610619469026; ap: 0.7691123346763341
+saving the model at the end of epoch 23
+Length of dataset: 15
+
+(Val @ epoch 23) acc: 0.7787610619469026; ap: 0.7754270020477325
+saving the model at the end of epoch 24
+Length of dataset: 15
+
+(Val @ epoch 24) acc: 0.7831858407079646; ap: 0.7823825752414966
+saving the model at the end of epoch 25
+Length of dataset: 15
+
+(Val @ epoch 25) acc: 0.7964601769911505; ap: 0.7884157060312369
+Train loss: 0.5248801708221436 at step: 400
+Iter time:  0.3655866748094559
+saving the model at the end of epoch 26
+Length of dataset: 15
+
+(Val @ epoch 26) acc: 0.8008849557522124; ap: 0.7967635041768619
+saving the model at the end of epoch 27
+Length of dataset: 15
+
+(Val @ epoch 27) acc: 0.8053097345132744; ap: 0.8040724416568259
+saving the model at the end of epoch 28
+Length of dataset: 15
+
+(Val @ epoch 28) acc: 0.8053097345132744; ap: 0.8101948787355446
+saving the model at the end of epoch 29
+Length of dataset: 15
+
+(Val @ epoch 29) acc: 0.8053097345132744; ap: 0.8157054918105515
+saving the model at the end of epoch 30
+Length of dataset: 15
+
+(Val @ epoch 30) acc: 0.8053097345132744; ap: 0.8208674343913389
+saving the model at the end of epoch 31
+Length of dataset: 15
+
+(Val @ epoch 31) acc: 0.8053097345132744; ap: 0.8260616745428381
+saving the model at the end of epoch 32
+Length of dataset: 15
+
+(Val @ epoch 32) acc: 0.8053097345132744; ap: 0.8332278963644283
+saving the model at the end of epoch 33
+Length of dataset: 15
+
+(Val @ epoch 33) acc: 0.8053097345132744; ap: 0.8371976891981188
+saving the model at the end of epoch 34
+Length of dataset: 15
+
+(Val @ epoch 34) acc: 0.8141592920353983; ap: 0.8428676206803973
+saving the model at the end of epoch 35
+Length of dataset: 15
+
+(Val @ epoch 35) acc: 0.8097345132743363; ap: 0.8459702855653637
+saving the model at the end of epoch 36
+Length of dataset: 15
+
+(Val @ epoch 36) acc: 0.8097345132743363; ap: 0.850672992920547
+saving the model at the end of epoch 37
+Length of dataset: 15
+
+(Val @ epoch 37) acc: 0.8141592920353983; ap: 0.855663575512255
+saving the model at the end of epoch 38
+Length of dataset: 15
+
+(Val @ epoch 38) acc: 0.8185840707964602; ap: 0.8581900766576425
+saving the model at the end of epoch 39
+Length of dataset: 15
+
+(Val @ epoch 39) acc: 0.8185840707964602; ap: 0.8610274303585166
+saving the model at the end of epoch 40
+Length of dataset: 15
+
+(Val @ epoch 40) acc: 0.8185840707964602; ap: 0.8643377474574306
+saving the model at the end of epoch 41
+Length of dataset: 15
+
+(Val @ epoch 41) acc: 0.8185840707964602; ap: 0.867123636099463
